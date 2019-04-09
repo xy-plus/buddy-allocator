@@ -2,9 +2,6 @@
 #![feature(alloc)]
 #![no_std]
 
-use buddy_system_allocator::LockedHeap;
-#[global_allocator]
-static HEAP_ALLOCATOR: LockedHeap = LockedHeap::empty();
 extern crate alloc;
 use alloc::vec::Vec;
 use core::alloc::Layout;
