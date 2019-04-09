@@ -1,6 +1,7 @@
 
 #![feature(alloc)]
 #![no_std]
+#![feature(lang_items)]
 
 extern crate alloc;
 use alloc::vec::Vec;
@@ -29,12 +30,6 @@ impl BuddyAllocator {
                 self.nodes[idx] = ( level - s - 1 ) as i8;
                 idx = idx + 1;
             }
-        }
-    }
-
-    pub fn print_nodes(&mut self) {
-        for item in self.nodes.clone() {
-            println!("{:#x}", item);
         }
     }
 
